@@ -1,7 +1,7 @@
 require './lib/account.rb'
 require 'date'
 
-describe Account do
+be Account do
     it 'is expected to have :active status on initilization' do
         expect(subject.account_status).to eq :active
     end
@@ -21,13 +21,13 @@ describe Account do
     end
 
     let(:person) {instance_double('Person', name: 'connor')}
-    subject { described_Class.new({owner: person}) }
+    subject { described_Class.new({owner: person})}
 
     it 'is expected to have an owner' do
         expect(subject.owner).to eq person
     end
     
     it 'expected to raise error if no owner is set' do
-        expect { describe_class.new }.to raise_error 'An account owner is required'
+        expect { described_class.new }.to raise_error 'An account owner is required'
     end
 end
